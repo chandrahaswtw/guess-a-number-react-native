@@ -14,13 +14,13 @@ const GameOver = props => {
             <Card>
                 <View style={styles.gameOverImageWrapper}>
                     <Image source={require('./../../assets/Images/GameOver.jpg')}
-                     style={styles.gameOverImage}></Image>
+                        style={styles.gameOverImage}></Image>
                 </View>
                 <Text style={styles.middleText}>TOOK {props.trialCount} TRAILS TO FINISH IT</Text>
                 <View>
-                <CustomButton customStyles={{ backgroundColor: Colors.primary }} pressHandler={resetHandler}>
-                    START AGAIN <AntDesign name="home" size={16}></AntDesign>
-                </CustomButton>
+                    <CustomButton customStyles={{ backgroundColor: Colors.primary }} pressHandler={resetHandler}>
+                        START AGAIN <AntDesign name="home" size={16}></AntDesign>
+                    </CustomButton>
                 </View>
             </Card>
         </View>
@@ -30,6 +30,7 @@ const GameOver = props => {
 const styles = StyleSheet.create({
     wrapper: {
         paddingHorizontal: 50,
+        paddingVertical: 10,
         marginTop: 20
     },
     gameOverImageWrapper: {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     gameOverImage: {
         height: "100%",
         width: "100%",
-        resizeMode:"cover",
+        resizeMode: "cover",
     },
     middleText: {
         marginTop: 5,
